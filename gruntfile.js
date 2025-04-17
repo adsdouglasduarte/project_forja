@@ -69,6 +69,12 @@ module.exports = function (grunt) {
         cwd: 'src/assets/fonts/',
         src: '**/*',
         dest: 'dist/fonts/'
+      },
+      svg: {
+        expand: true,
+        cwd: "src/img",
+        src: ["**/*.svg"],
+        dest: "dist/img"
       }
     },
 
@@ -99,6 +105,10 @@ module.exports = function (grunt) {
         files: ["src/img/**/*.{png,jpeg,jpg,gif}"],
         tasks: ["imagemin"],
       },
+      svg: {
+        files: ["src/img/**/*.svg"],
+        tasks: ["copy:svg"],
+      },    
       less: {
         files: ["src/less/**/*.less"],
         tasks: ["less", "cssmin", "clean:css"],
@@ -110,7 +120,7 @@ module.exports = function (grunt) {
       fonts: {
         files: ["src/assets/fonts/**/*"],
         tasks: ["copy"],
-      },
+      }  
     },
 
     clean: {
