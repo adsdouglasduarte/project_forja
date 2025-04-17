@@ -1,0 +1,35 @@
+@import '_header.less';
+@import '_variables.less';
+@import '_navbar.less';
+@import '_cast.less';
+@import '_video.less';
+@import '_aside.less';
+@import '_footer.less';
+@import '_mixins.less';
+//evitar o scroll lateral e efeito de suave na pagina
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'MIXONE';
+    src: url('MIXONERegular.woff2') format('woff2'),
+        url('MIXONERegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    
+}
+
+

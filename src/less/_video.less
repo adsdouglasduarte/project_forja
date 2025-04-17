@@ -1,0 +1,51 @@
+.video__box {
+    background-image: url(../img/banner_rellax.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 5rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .video-wrapper {
+        width: 100%;
+        max-width: 960px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.video__box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); // escurece levemente o fundo
+    z-index: 1;
+}
+
+.video__box {
+    position: relative;
+    z-index: 0;
+
+    .video-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .video__box {
+        padding: 3rem 1rem;
+
+        .video-wrapper {
+            aspect-ratio: 9 / 16;
+        }
+
+        iframe {
+            height: 70vh;
+        }
+    }
+}
